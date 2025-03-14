@@ -1,3 +1,4 @@
+'use client'
 import { Suspense } from "react"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, BarChart2, Users, Calendar, MessageSquare } from "lucide-react"
@@ -7,6 +8,25 @@ import FeatureCard from "@/components/feature-card"
 import TestimonialSlider from "@/components/testimonial-slider"
 import PricingCards from "@/components/pricing-cards"
 
+
+
+
+function WhatsappContact() {
+  return (
+    <>
+      <Button
+        size="lg"
+        variant="outline"
+        onClick={() => {
+          window.open('https://wa.me/+1234567890', '_blank')
+        }}
+      >
+        <MessageSquare className="mr-2 h-4 w-4" />
+        Schedule a Demo
+      </Button>
+    </>
+  )
+}
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -59,12 +79,7 @@ export default function Home() {
                   Boost productivity and focus on what matters.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="px-8">
-                    Start Free Trial
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    Watch Demo
-                  </Button>
+                  <WhatsappContact />
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <CheckCircle className="h-4 w-4 text-primary" />
