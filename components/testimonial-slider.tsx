@@ -106,11 +106,11 @@ export default function TestimonialSlider() {
               }}
               className="flex flex-col items-center text-center"
             >
-              <div className="mb-6 rounded-full bg-primary/10 p-2">
+              <div className="mb-6">
                 <Quote className="h-6 w-6 text-primary" />
               </div>
               <blockquote className="mb-6 max-w-2xl text-xl font-medium italic">
-                "{testimonials[current].content}"
+                &ldquo;{testimonials[current].content}&rdquo;
               </blockquote>
               <div className="flex flex-col items-center">
                 <Avatar className="h-16 w-16 mb-4">
